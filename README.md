@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 5 ChatApp
 
-Things you may want to cover:
+Requirements:
 
-* Ruby version
+* rails 5
 
-* System dependencies
+* ruby > 2.3.0
 
-* Configuration
+* postres
 
-* Database creation
+* puma
 
-* Database initialization
+* redis
 
-* How to run the test suite
+If postres role 'user_name' does not exits, run this command and enter user_name
 
-* Services (job queues, cache servers, search engines, etc.)
+* `sudo -u postgres createuser --interactive`
 
-* Deployment instructions
+How to create Chatapp in Rails 5:
 
-* ...
+* `rails new app_name --database=postgresql`
+
+* `bundle install`
+
+* `rake db:create; rake db:migrate`
