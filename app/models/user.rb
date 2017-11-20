@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   validates :username, presence: true, uniqueness: true
 
-  has_many :messages
-  has_many :chatrooms, through: :messages
+  has_many :messaages
+  has_many :chatrooms, through: :messaages
   
 end

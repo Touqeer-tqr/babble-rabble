@@ -1,0 +1,5 @@
+<%= link_to "Sign in", new_user_session_path %>
+<h2>Chatrooms:</h2>
+<% @chatrooms.each do |topic| %>
+  <h3><%= topic %></h3>
+<% end %>
