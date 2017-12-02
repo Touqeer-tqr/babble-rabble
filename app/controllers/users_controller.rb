@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   def home
-  	@chatrooms = Chatroom.all.collect(&:topic)
+  	@chatrooms = Chatroom.all
   end
 
 end
