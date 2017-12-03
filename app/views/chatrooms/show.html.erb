@@ -2,21 +2,12 @@
   <h1><%= @chatroom.topic %></h1>
 
 <div class="panel panel-default">
-  <% if @chatroom.messaages.any? %>
-    <div class="panel-body" id="messaages">
-      <%= render partial: 'messaages/messaage', collection: @chatroom.messaages%>
-    </div>
-  <%else%>
-    <div class="panel-body hidden" id="messaages">
-    </div>
-  <%end%>
+   <div class="panel-body" id="messages" style="height: 300px;overflow-y: scroll;width: 500px;">
+    <% if @chatroom.messages.any? %>
+      <%= render partial: 'messages/message', collection: @chatroom.messages%>
+    <%end%>
+  </div>
 </div>
 
-  <%= form_for @messaage, remote: true, authenticity_token: true do |f| %>
-    <%= f.label :your_message %>:
-    <%= f.text_field :msg, class: "form-control", data: {textarea: "message"} %>
-
-    <%= f.hidden_field :chatroom_id, value: @chatroom.id %>
-    <%= f.submit "send", class: "btn btn-primary", style: "display: none", data: {send: "message"} %>
-  <% end %>
+  <%= render partial: 'messages/form' %>
 </div>

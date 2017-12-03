@@ -3,9 +3,9 @@
 one:
   msg: MyString
   user_id: 1
-  chatroom: 
+  chatroom_id: 1
 
 two:
   msg: MyString
   user_id: 1
-  chatroom: 
+  chatroom_id: 1

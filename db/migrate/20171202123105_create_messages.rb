@@ -1,6 +1,6 @@
-class CreateMessaages < ActiveRecord::Migration[5.1]
+class CreateMessages < ActiveRecord::Migration[5.1]
   def change
-    create_table :messaages do |t|
+    create_table :messages do |t|
       t.string :msg
       t.integer :user_id
       t.integer :chatroom_id
