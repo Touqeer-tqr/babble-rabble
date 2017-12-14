@@ -1,0 +1,22 @@
+<!-- Modal -->
+<div class="modal fade" id="chatroom_modal" role="dialog">
+  <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create Chatroom</h4>
+        </div>
+        <ul id="chatroom-errors">
+        </ul>
+        <%= form_for(@chatroom, remote: true ) do |f| %>
+          <div class="modal-body">
+            <%= f.text_field :topic, placeholder: "Chatroom name", class: "form-control" %>
+          </div>
+          <div class="modal-footer">
+            <%= f.submit "Craete", class: 'btn btn-primary' %>
+          </div>
+      </div>    
+    <% end %>
+  </div>
+</div>

@@ -1,8 +1,11 @@
-<div class="row col-md-8 col-md-offset-2">
+<%= link_to 'Chatrooms', root_path, class: "btn btn-info" %>
+<br>
+
+<div class="col-sm-8 col-xs-12 col-sm-offset-2">
   <h1><%= @chatroom.topic %></h1>
 
 <div class="panel panel-default">
-   <div class="panel-body" id="messages" style="height: 300px;overflow-y: scroll;width: 500px;">
+   <div class="panel-body" id="messages" style="height: 300px;overflow-y: scroll;">
     <% if @chatroom.messages.any? %>
       <%= render partial: 'messages/message', collection: @chatroom.messages%>
     <%end%>
