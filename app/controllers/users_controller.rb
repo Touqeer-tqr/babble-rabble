@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   	@chatrooms = Chatroom.all
   end
 
-  def create 
+  def create
+    p '*'*100
     user = User.new(user_params)
     if user.save
       redirect_to user_session_path
